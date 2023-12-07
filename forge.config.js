@@ -1,4 +1,16 @@
 module.exports = {
+  publishers: [
+    {
+      name: '@electron-forge/publisher-github',
+      config: {
+        repository: {
+          owner: 'IsThisDemi',
+          name: 'number-guesser'
+        },
+        prerelease: true
+      }
+    }
+  ],
   packagerConfig: {
     asar: true,
     icon: './src/images/rosa_n_guess',
@@ -8,6 +20,14 @@ module.exports = {
     {
       name: '@electron-forge/maker-squirrel',
       config: {},
+    },
+    {
+      name: '@electron-forge/maker-dmg',
+      config: {
+        icon: './src/images/icon.png',
+        background: './src/images/dmg-background.jpg',
+        format: 'ULFO'
+      },
     },
     {
       name: '@electron-forge/maker-zip',

@@ -1,6 +1,7 @@
 module.exports = {
   packagerConfig: {
     asar: true,
+    icon: './src/images/rosa_n_guess',
   },
   rebuildConfig: {},
   makers: [
